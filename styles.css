@@ -10,6 +10,30 @@ li {
     list-style-type: none;
 }
 
+section {
+    background-color: rgb(245, 245, 245);
+}
+/* 
+
+LANDING PAGE 
+
+*/
+
+#landing-page {
+    min-height: 100vh; /*this will prevent the whole page from scrolling*/
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*this is how you position things absolute in the center*/
+    width: 100%;
+    max-width: 1000px;
+
+}
+
 /* 
 
 NAVIGATION 
@@ -24,12 +48,14 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     height: 100px;
+    padding: 0 20px;
 }
 
 #personal-logo {
     width: 50px;
     height: 50px;
     filter: invert(1);
+
 }
 
 .nav__link--list {
@@ -50,3 +76,4 @@ nav {
 .fa-adjust {
     font-size: 20px;
 }
+
