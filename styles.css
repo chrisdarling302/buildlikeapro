@@ -44,7 +44,7 @@ b {
 }
 
 .blue {
-    color: blue;
+    color: #0088ff;
 }
 
 .title {
@@ -125,7 +125,7 @@ input:hover, textarea:hover {
 }
 
 input:focus, textarea:focus {
-    border-color: blue;
+    border-color: #0088ff;
 }
 
 /* 
@@ -164,7 +164,7 @@ LANDING PAGE
 }
 
 .social__link {
-    background-color: blue;
+    background-color: #0088ff;
     color: white;
     padding: 6px;
     width: 32px;
@@ -364,8 +364,8 @@ MODAL
 }
 
 .form__submit {
-    background-color: blue;
-    border: 2px solid blue;
+    background-color: #0088ff;
+    border: 2px solid #0088ff;
     border-radius: 5px;
     color: white;
     font-weight: 700;
@@ -383,8 +383,8 @@ MODAL
 }
 
 .form__submit:active {
-    border-color: blue;
-    color: blue;
+    border-color: #0088ff;
+    color: #0088ff;
 }
 
 .modal__overlay {
@@ -404,6 +404,15 @@ MODAL
     z-index: -1;
 }
 
+.modal__overlay--success {
+    background-color: #4bb543;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+    z-index: -1;
+}
+
 .modal__overlay--visible {
     z-index: 1;
 }
@@ -419,15 +428,6 @@ MODAL
     100% {
         transform: rotate(360deg);
     }
-}
-
-.modal__overlay--success {
-    background-color: #4bb543;
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    padding: 20px;
-    z-index: -1;
 }
 
 .modal__exit {

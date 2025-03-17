@@ -6,7 +6,7 @@
 
 //Browser Script:
 /**<script type="text/javascript"
-src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 <script type="text/javascript">
    (function(){
@@ -19,19 +19,24 @@ src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 
 function contact(event) {
     event.preventDefault();
-    /**emailjs
+    const loading = document.querySelector(".modal__overlay--loading");
+    const success = document.querySelector(".modal__overlay--success");
+    loading.classList.add("modal__overlay--visible");
+
+    emailjs
     .sendForm(
         "service_j0vole5",
         "template_m3odffw",
         event.target,
         "TfEdOzUw_Th6TcFQJ"
     ).then(() => {
-        console.log("this worked")
-    })*/
-const loading = document.querySelector(".modal__overlay--loading");
-const success = document.querySelector(".modal__overlay--success");
-loading.classList += " modal__overlay--visible"
-setTimeout(() =>{
-    console.log("it worked 1")
-}, 1000);
-    }
+        loading.classList.remove("modal__overlay--visible");
+        success.classList.add("modal__overlay--visible");
+    }).catch(() => {
+        loading.classList.remove("modal__overlay--visible");
+        alert(
+            "The email service is temporarily unavailable. Please contact me directly at cldarling@gmail.com"
+        );
+        console.log(event.target);
+    })
+ }
