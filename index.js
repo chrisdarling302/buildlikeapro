@@ -40,3 +40,13 @@ function contact(event) {
         console.log(event.target);
     })
  }
+
+ let isModalOpen = false;
+ function toggleModal() {
+    if (isModalOpen) {
+        isModalOpen = false;
+        return document.body.classList.remove("modal--open")
+    }
+    isModalOpen = true;
+    document.body.classList.add("modal--open");
+ }
