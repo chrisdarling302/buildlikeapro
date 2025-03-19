@@ -16,6 +16,28 @@
    })();
 </script>
 */
+let contrastToggle = false;
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle;
+    if (contrastToggle) {
+        document.body.classList.add("dark-theme");
+    }
+    else {
+        document.body.classList.remove("dark-theme")
+    }
+}
+
+
+let isModalOpen = false;
+ function toggleModal() {
+    if (isModalOpen) {
+        isModalOpen = false;
+        return document.body.classList.remove("modal--open")
+    }
+    isModalOpen = true;
+    document.body.classList.add("modal--open");
+ }
 
 function contact(event) {
     event.preventDefault();
@@ -41,12 +63,4 @@ function contact(event) {
     })
  }
 
- let isModalOpen = false;
- function toggleModal() {
-    if (isModalOpen) {
-        isModalOpen = false;
-        return document.body.classList.remove("modal--open")
-    }
-    isModalOpen = true;
-    document.body.classList.add("modal--open");
- }
+ 
