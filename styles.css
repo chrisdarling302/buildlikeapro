@@ -722,7 +722,7 @@ third
 
 /* Small Phones */
 
-@media (max-width: 480px;) {
+@media (max-width: 480px) {
     .title {
         font-size: 52px;
     }
