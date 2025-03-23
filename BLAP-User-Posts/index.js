@@ -12,7 +12,7 @@ main();
 
 function showUserPosts(id) {
   localStorage.setItem("id100", id);
-   window.location.href = `${window.location.origin}/BLAP-User-Posts/user.html`
+   window.location.href = `${window.location.origin}buildlikeapro/BLAP-User-Posts/user.html`
  }
 
 function userHTML(user) {
